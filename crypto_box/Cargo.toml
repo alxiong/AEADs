@@ -1,6 +1,6 @@
 [package]
 name = "crypto_box"
-version = "0.6.0"
+version = "0.6.1"
 description = """
 Pure Rust implementation of NaCl's crypto_box public-key authenticated
 encryption primitive which combines the X25519 Elliptic Curve Diffie-Hellman
@@ -18,7 +18,7 @@ keywords = ["nacl", "libsodium", "public-key", "x25519", "xsalsa20poly1305"]
 
 [dependencies]
 chacha20 = { version = "0.7.1", features = ["expose-core", "hchacha"] }
-rand_core = "0.6"
+rand_core = "^0.5.1"
 salsa20 = { version = "0.8", features = ["hsalsa20"] }
 x25519-dalek = { version = "1", default-features = false }
 zeroize = { version = "1", default-features = false }
@@ -36,7 +36,7 @@ features = ["rand_core"]
 path = "../xsalsa20poly1305"
 
 [dev-dependencies]
-rand_core = { version = "0.6", features = ["std"] }
+rand_core = { version = "^0.5.1", features = ["std"] }
 
 [features]
 default = ["alloc", "u64_backend"]
