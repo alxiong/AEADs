@@ -205,7 +205,7 @@ pub const KEY_SIZE: usize = 32;
 pub type Tag = GenericArray<u8, U16>;
 
 /// `crypto_box` secret key
-#[derive(Clone)]
+#[derive(Clone, PartialEq)]
 pub struct SecretKey([u8; KEY_SIZE]);
 
 impl SecretKey {
